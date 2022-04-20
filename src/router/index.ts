@@ -2,17 +2,17 @@ import { createRouter, createWebHistory } from 'vue-router';
 import BookingOverview from '../pages/BookingOverview.vue';
 import BookingDetails from '../pages/BookingDetails.vue';
 
+type MODE = 'development' | 'production';
+const mode: MODE = "production";
+
 const router = createRouter({
-    history: createWebHistory(),
+    //@ts-ignore
+    history: createWebHistory(mode === "production" ? "/vue-calendar-week" : "/"),
     routes: [
       // dev only
-      // { name: 'home', path: '/', redirect: '/bookings' },
-      // { name: 'bookings', path: '/bookings', component: BookingOverview },
-      // { name: 'details', path: '/stations/:stationId/bookings/:bookingId', component: BookingDetails, props: true },
-      // production mode
-      { name: 'home', path: '/vue-calendar-week/', redirect: '/vue-calendar-week/bookings' },
-      { name: 'bookings', path: '/vue-calendar-week/bookings', component: BookingOverview },
-      { name: 'details', path: '/vue-calendar-week/stations/:stationId/bookings/:bookingId', component: BookingDetails, props: true },
+      { name: 'home', path: '/', redirect: '/bookings' },
+      { name: 'bookings', path: '/bookings', component: BookingOverview },
+      { name: 'details', path: '/stations/:stationId/bookings/:bookingId', component: BookingDetails, props: true },
     ]
   });
 
