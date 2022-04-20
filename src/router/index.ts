@@ -8,6 +8,9 @@ const router = createRouter({
       { path: '/', redirect: '/bookings' },
       { name: 'booking-overview', path: '/bookings', component: BookingOverview },
       { path: '/stations/:stationId/bookings/:bookingId', component: BookingDetails, props: true },
+      { path: '/vue-calendar-week/', redirect: '/vue-calendar-week/bookings' },
+      { name: 'booking-overview', path: '/vue-calendar-week/bookings', component: BookingOverview },
+      { path: '/vue-calendar-week/stations/:stationId/bookings/:bookingId', component: BookingDetails, props: true },
     ]
   });
 
