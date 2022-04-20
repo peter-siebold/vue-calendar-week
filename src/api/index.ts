@@ -1,5 +1,5 @@
 import { Station, Booking } from "./typings";
-const API_BASE_URL = "http://localhost:3003/stations";
+const API_BASE_URL = "https://605c94c36d85de00170da8b4.mockapi.io/stations";
 
 export const getStations = async (): Promise<Station[]> => {
   const response = await fetch(API_BASE_URL);
