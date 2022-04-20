@@ -2,6 +2,7 @@
 
 # abort on errors
 set -e
+rm -rf dist
 
 # build
 npm run build
@@ -20,7 +21,7 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:peter-siebold/vue-weekly-calendar-view.git main:gh-pages
+git push -f git@github.com:peter-siebold/vue-calendar-week.git main:gh-pages
 
 cd -
 
