@@ -182,7 +182,7 @@ watch(
     });
     const stationId = route.params.stationId || store.getters.getStationId;
     router.push({
-      path: "/bookings",
+      name: "bookings",
       query: {
         stationId,
         from: startOfWeek.format("YYYY-MM-DD"),

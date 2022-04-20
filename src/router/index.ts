@@ -5,12 +5,14 @@ import BookingDetails from '../pages/BookingDetails.vue';
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-      { path: '/', redirect: '/bookings' },
-      { name: 'booking-overview', path: '/bookings', component: BookingOverview },
-      { path: '/stations/:stationId/bookings/:bookingId', component: BookingDetails, props: true },
-      { path: '/vue-calendar-week/', redirect: '/vue-calendar-week/bookings' },
-      { name: 'booking-overview', path: '/vue-calendar-week/bookings', component: BookingOverview },
-      { path: '/vue-calendar-week/stations/:stationId/bookings/:bookingId', component: BookingDetails, props: true },
+      // dev only
+      { name: 'home', path: '/', redirect: '/bookings' },
+      { name: 'bookings', path: '/bookings', component: BookingOverview },
+      { name: 'details', path: '/stations/:stationId/bookings/:bookingId', component: BookingDetails, props: true },
+      // production mode
+      // { name: 'home', path: '/vue-calendar-week/', redirect: '/vue-calendar-week/bookings' },
+      // { name: 'bookings', name: 'booking-overview', path: '/vue-calendar-week/bookings', component: BookingOverview },
+      // { name: 'details', path: '/vue-calendar-week/stations/:stationId/bookings/:bookingId', component: BookingDetails, props: true },
     ]
   });
 

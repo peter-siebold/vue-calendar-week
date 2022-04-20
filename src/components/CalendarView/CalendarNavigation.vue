@@ -25,7 +25,7 @@ function setNextWeek() {
   });
   const stationId = route.params.stationId || store.getters.getStationId;
   router.push({
-    path: "/bookings",
+    name: "bookings",
     query: {
       stationId,
       from: nextStartOfWeek.format("YYYY-MM-DD"),
@@ -45,7 +45,7 @@ function setPreviousWeek() {
   });
   const stationId = route.params.stationId || store.getters.getStationId;
   router.push({
-    path: "/bookings",
+    name: "bookings",
     query: {
       stationId,
       from: previousStartOfWeek.format("YYYY-MM-DD"),
