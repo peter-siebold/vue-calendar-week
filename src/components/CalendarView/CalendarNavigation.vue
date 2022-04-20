@@ -1,7 +1,19 @@
 <template>
   <section>
-    <button @click="setPreviousWeek">Previous Week</button> |
-    <button @click="setNextWeek">Next Week</button>
+    <div class="inline-flex">
+      <button
+        @click="setPreviousWeek"
+        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l"
+      >
+        Prev
+      </button>
+      <button
+        @click="setNextWeek"
+        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
+      >
+        Next
+      </button>
+    </div>
   </section>
 </template>
 

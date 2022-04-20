@@ -217,7 +217,7 @@ body {
 }
 
 .title {
-  background: #217346;
+  background: #818181;
   text-align: center;
   display: grid;
   place-content: center;
