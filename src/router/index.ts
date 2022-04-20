@@ -6,13 +6,13 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
       // dev only
-      { name: 'home', path: '/', redirect: '/bookings' },
-      { name: 'bookings', path: '/bookings', component: BookingOverview },
-      { name: 'details', path: '/stations/:stationId/bookings/:bookingId', component: BookingDetails, props: true },
+      // { name: 'home', path: '/', redirect: '/bookings' },
+      // { name: 'bookings', path: '/bookings', component: BookingOverview },
+      // { name: 'details', path: '/stations/:stationId/bookings/:bookingId', component: BookingDetails, props: true },
       // production mode
-      // { name: 'home', path: '/vue-calendar-week/', redirect: '/vue-calendar-week/bookings' },
-      // { name: 'bookings', name: 'booking-overview', path: '/vue-calendar-week/bookings', component: BookingOverview },
-      // { name: 'details', path: '/vue-calendar-week/stations/:stationId/bookings/:bookingId', component: BookingDetails, props: true },
+      { name: 'home', path: '/vue-calendar-week/', redirect: '/vue-calendar-week/bookings' },
+      { name: 'bookings', path: '/vue-calendar-week/bookings', component: BookingOverview },
+      { name: 'details', path: '/vue-calendar-week/stations/:stationId/bookings/:bookingId', component: BookingDetails, props: true },
     ]
   });
 
